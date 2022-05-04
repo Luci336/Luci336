@@ -1,0 +1,319 @@
+init -1:
+
+    $ game_version = "0.2.9"
+
+init python:
+
+    import datetime
+    year = datetime.datetime.today().year
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label start:
+
+    jump prologue
+
+    return
+
+label after_load:
+
+    if (inc == True):
+        call inclabel
+
+
+    if (game_version == "0.2.2"):
+        if laurevents >= 3:
+            $ laurevents = 2
+            $ laurquest = True
+            $ sidequest -= 1
+    $ game_version = config.version
+
+label name_fix:
+    if _in_replay:
+        $ mcname = persistent.repname1
+        $ sil = persistent.repname2
+        $ mil = persistent.repname3
+        $ bil = persistent.repname4
+        $ yel = "{color=#FFFF00}"
+        $ bl = "{color=#000}"
+        $ gre = "{color=#008000}"
+        $ blu = "{color=#0000ff}"
+
+init -4:
+    $ persistent.lock = False
+    $ inc = False
+# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
